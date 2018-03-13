@@ -1,10 +1,9 @@
 import 'package:exero_prototype_app/Common/app-elements.dart';
 import 'package:exero_prototype_app/Common/menu-drawer.dart';
 import 'package:exero_prototype_app/Pages/add-exercise-page.dart';
+import 'package:exero_prototype_app/Pages/start-session-page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-//const String _menuImageAsset = 'assets/images/zach.jpg';
 
 class HomePage extends StatelessWidget {
   HomePage({Key key, this.title}) : super(key: key);
@@ -18,7 +17,7 @@ class HomePage extends StatelessWidget {
       appBar: AppElements.exAppbar(this.title),
       body: new ListView(
         children: <Widget>[
-          // _menuButton("START SESSION", "/startsession"),
+          new MenuButton("START SESSION", StartSessionPage.routeName),
           new MenuButton("ADD EXERCISE", AddExercisePage.routeName),
         ],
       )
