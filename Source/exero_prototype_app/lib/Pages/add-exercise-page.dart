@@ -8,7 +8,6 @@ class AddExercisePage extends StatefulWidget {
   AddExercisePage({Key key, this.title}) : super(key: key);
 
   final String title;
-  static final String routeName = '/addexercise';
 
   @override
   AddExercisePageState createState() => new AddExercisePageState();
@@ -54,8 +53,6 @@ class AddExercisePageState extends State<AddExercisePage> {
           return _item(value);
         }).toList(),
         onChanged: (String newValue) {
-          // null indicates the user didn't select a
-          // new value.
           setState(() {
             _typeValue = null;
             if (newValue != null){

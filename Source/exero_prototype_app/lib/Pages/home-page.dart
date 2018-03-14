@@ -1,8 +1,6 @@
 import 'package:exero_prototype_app/Common/app-elements.dart';
 import 'package:exero_prototype_app/Common/menu-drawer.dart';
-import 'package:exero_prototype_app/Pages/add-exercise-page.dart';
-import 'package:exero_prototype_app/Pages/start-session-page.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:exero_prototype_app/Common/app-routes.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -15,12 +13,19 @@ class HomePage extends StatelessWidget {
     return new Scaffold(
       drawer: new MenuDrawer(),
       appBar: AppElements.exAppbar(this.title),
-      body: new ListView(
-        children: <Widget>[
-          new MenuButton("START SESSION", StartSessionPage.routeName),
-          new MenuButton("ADD EXERCISE", AddExercisePage.routeName),
-        ],
-      )
+      body: new HomeContainer()
+    );
+  }
+}
+
+class HomeContainer extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new ListView(
+      children: <Widget>[
+        new MenuButton("START SESSION", AppRoutes.startSession),
+        new MenuButton("ADD EXERCISE", AppRoutes.addExercise),
+      ],
     );
   }
 }

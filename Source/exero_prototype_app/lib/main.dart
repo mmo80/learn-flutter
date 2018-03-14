@@ -1,3 +1,4 @@
+import 'package:exero_prototype_app/Common/app-routes.dart';
 import 'package:exero_prototype_app/Pages/add-exercise-page.dart';
 import 'package:exero_prototype_app/Pages/start-session-page.dart';
 import 'package:exero_prototype_app/Pages/home-page.dart';
@@ -12,15 +13,15 @@ class MyApp extends StatelessWidget {
     final String _header = "Exero";
 
     return new MaterialApp(
-      title: 'Exero Prototype Demo',
+      title: 'Exero Prototype',
       //debugShowMaterialGrid: true,
       theme: new ThemeData(
         primaryColor: const Color(0xFF494949),
       ),
       home: new HomePage(title: _header),
       routes: <String, WidgetBuilder> {
-        StartSessionPage.routeName: (BuildContext context) => new StartSessionPage(title: _header),
-        AddExercisePage.routeName: (BuildContext context) => new AddExercisePage(title: _header),
+        AppRoutes.startSession: (BuildContext context) => new StartSessionPage(title: _header),
+        AppRoutes.addExercise: (BuildContext context) => new AddExercisePage(title: _header),
       },
     );
   }

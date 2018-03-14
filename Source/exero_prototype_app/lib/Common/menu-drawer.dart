@@ -1,6 +1,5 @@
 import 'package:exero_prototype_app/Common/app-text-styles.dart';
-import 'package:exero_prototype_app/Pages/add-exercise-page.dart';
-import 'package:exero_prototype_app/Pages/start-session-page.dart';
+import 'package:exero_prototype_app/Common/app-routes.dart';
 import 'package:flutter/material.dart';
 
 class MenuDrawer extends StatelessWidget {
@@ -22,8 +21,8 @@ class MenuDrawer extends StatelessWidget {
 
     List<ListTile> _tiles = [
       tile(context, 'HOME', '/'),
-      tile(context, 'START SESSION', StartSessionPage.routeName),
-      tile(context, 'ADD EXERCISE', AddExercisePage.routeName),
+      tile(context, 'START SESSION', AppRoutes.startSession),
+      tile(context, 'ADD EXERCISE', AppRoutes.addExercise),
       tile(context, 'HISTORY', '/'),
       tile(context, 'SETTINGS', '/'),
     ];
