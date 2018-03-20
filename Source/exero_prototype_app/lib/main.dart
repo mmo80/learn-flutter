@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       //debugShowMaterialGrid: true,
       theme: new ThemeData(
         primaryColor: const Color(0xFF494949),
+        fontFamily: 'Rubik',
       ),
       home: new HomePage(title: _header),
       routes: <String, WidgetBuilder> {
